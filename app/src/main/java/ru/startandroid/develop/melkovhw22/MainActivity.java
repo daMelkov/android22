@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    final private static String URL = "http://myfile.org/";
+    final private static String URL = "http://myfile.org/" + new Random().nextInt(100);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         /* URL фотографии */
         TextView textView = findViewById(R.id.url);
-        textView.setText(URL + new Random().nextInt(100));
+        textView.setText(URL);
     }
 }
